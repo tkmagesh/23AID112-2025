@@ -7,9 +7,10 @@ def merge_sort(arr):
     indent += "  "
     invocation_count += 1
     
+    print(f"{indent} [merge_sort({invocation_count})] arr =", arr)
+    
     if len(arr) <= 1:
         return arr
-    print(f"{indent} [merge_sort({invocation_count})] arr =", arr)
     mid = len(arr) // 2
     
     print(f"{indent} [merge_sort({invocation_count})] arr[:{mid}] = {arr[:mid]}, arr[{mid}:] = {arr[mid:]}")
@@ -20,7 +21,10 @@ def merge_sort(arr):
     right = merge_sort(arr[mid:])
     print(f"{indent} [merge_sort({invocation_count})] right =", right)
 
-    return merge(left, right)
+    merge_sort_result = merge(left, right)
+    print(f"{indent} [merge_sort({invocation_count})] merge_sort_result = {merge_sort_result}")
+    
+    return merge_sort_result
 
 def merge(left, right):
     result = []
