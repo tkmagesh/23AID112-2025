@@ -1,4 +1,295 @@
 
+# **Section A – Arrays & Linked Lists**
+
+---
+
+### **Q1.** A system frequently requires random access to elements by index. Which data structure is most suitable?
+
+A) Singly Linked List
+B) Doubly Linked List
+C) Array
+D) Circular Linked List
+
+**Answer:** C
+
+---
+
+### **Q2.** What is the time complexity of accessing the ith element in a singly linked list?
+
+A) O(1)
+B) O(log n)
+C) O(n)
+D) O(n log n)
+
+**Answer:** C
+
+---
+
+### **Q3.** In a dynamic array, the amortized time complexity of append operation is:
+
+A) O(n²)
+B) O(log n)
+C) O(1)
+D) O(n)
+
+**Answer:** C
+
+---
+
+### **Q4.** Which structure is best suited for implementing an Undo/Redo feature?
+
+A) Array
+B) Singly Linked List
+C) Doubly Linked List
+D) Stack only
+
+**Answer:** C
+
+---
+
+### **Q5.** Inserting an element at the beginning of a singly linked list takes:
+
+A) O(1)
+B) O(n)
+C) O(log n)
+D) O(n log n)
+
+**Answer:** A
+
+---
+
+### **Q6.** Deleting a node from the middle of an array requires:
+
+A) No shifting
+B) O(1) time
+C) O(n) time due to shifting
+D) O(log n) time
+
+**Answer:** C
+
+---
+
+### **Q7.** Which data structure is most appropriate for Round Robin scheduling?
+
+A) Stack
+B) Array
+C) Circular Linked List
+D) Binary Tree
+
+**Answer:** C
+
+---
+
+### **Q8.** A doubly linked list differs from a singly linked list because:
+
+A) It stores elements in sorted order
+B) It allows traversal in both directions
+C) It uses less memory
+D) It has constant time search
+
+**Answer:** B
+
+---
+
+# **Section B – Searching Algorithms**
+
+---
+
+### **Q9.** Binary search requires:
+
+A) Linked list
+B) Sorted data
+C) Circular array
+D) Hashing
+
+**Answer:** B
+
+---
+
+### **Q10.** Time complexity of linear search in worst case:
+
+A) O(1)
+B) O(log n)
+C) O(n)
+D) O(n²)
+
+**Answer:** C
+
+---
+
+### **Q11.** Time complexity of binary search in worst case:
+
+A) O(n)
+B) O(n log n)
+C) O(log n)
+D) O(1)
+
+**Answer:** C
+
+---
+
+### **Q12.** Binary search is inefficient on linked lists because:
+
+A) Linked lists cannot store sorted data
+B) No direct index access
+C) Linked lists use more memory
+D) Binary search requires recursion
+
+**Answer:** B
+
+---
+
+# **Section C – Sorting Algorithms**
+
+---
+
+### **Q13.** Worst-case time complexity of Bubble Sort:
+
+A) O(n)
+B) O(n log n)
+C) O(n²)
+D) O(log n)
+
+**Answer:** C
+
+---
+
+### **Q14.** Which sorting algorithm guarantees O(n log n) in worst case?
+
+A) Quick Sort
+B) Merge Sort
+C) Insertion Sort
+D) Bubble Sort
+
+**Answer:** B
+
+---
+
+### **Q15.** Average time complexity of Quick Sort:
+
+A) O(n²)
+B) O(log n)
+C) O(n log n)
+D) O(n)
+
+**Answer:** C
+
+---
+
+### **Q16.** Which algorithm performs best when the array is nearly sorted?
+
+A) Merge Sort
+B) Quick Sort
+C) Insertion Sort
+D) Selection Sort
+
+**Answer:** C
+
+---
+
+### **Q17.** Selection Sort always performs:
+
+A) O(n) comparisons
+B) O(n²) comparisons
+C) O(log n) comparisons
+D) O(n log n) comparisons
+
+**Answer:** B
+
+---
+
+### **Q18.** Which sorting algorithm requires additional auxiliary space?
+
+A) Bubble Sort
+B) Insertion Sort
+C) Merge Sort
+D) Selection Sort
+
+**Answer:** C
+
+---
+
+# **Section D – Time & Space Complexity**
+
+---
+
+### **Q19.** The time complexity of two nested loops running n times each is:
+
+A) O(n)
+B) O(log n)
+C) O(n²)
+D) O(n log n)
+
+**Answer:** C
+
+---
+
+### **Q20.** If input size doubles in an O(n²) algorithm, runtime approximately:
+
+A) Doubles
+B) Increases four times
+C) Increases eight times
+D) Remains constant
+
+**Answer:** B
+
+---
+
+### **Q21.** Space complexity of an in-place sorting algorithm is:
+
+A) O(n)
+B) O(n²)
+C) O(1)
+D) O(log n)
+
+**Answer:** C
+
+---
+
+### **Q22.** Big-O notation represents:
+
+A) Best-case complexity
+B) Worst-case upper bound
+C) Exact runtime
+D) Average runtime only
+
+**Answer:** B
+
+---
+
+### **Q23.** Big-Theta notation represents:
+
+A) Upper bound only
+B) Lower bound only
+C) Tight bound
+D) Worst case only
+
+**Answer:** C
+
+---
+
+### **Q24.** If an algorithm has O(n log n) complexity, which grows faster?
+
+A) O(n)
+B) O(log n)
+C) O(n²)
+D) O(1)
+
+**Answer:** C
+
+---
+
+### **Q25.** For small datasets (n < 20), which algorithm may still be acceptable despite O(n²) complexity?
+
+A) Merge Sort
+B) Quick Sort
+C) Bubble Sort
+D) Binary Search
+
+**Answer:** C
+
+---
+
 
 ### **Question 1: Dynamic Array vs Linked List Decision (Real-World System Design)**
 
