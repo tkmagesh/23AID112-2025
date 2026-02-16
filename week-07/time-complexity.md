@@ -25,7 +25,7 @@ Think of it as answering:
 
 | Big-O      | Name         | Example                        |
 | ---------- | ------------ | ------------------------------ |
-| O(1)       | Constant     | Access array element           |
+| O(1)       | Constant     | Access array element by index         |
 | O(log n)   | Logarithmic  | Binary search                  |
 | O(n)       | Linear       | Loop through list              |
 | O(n log n) | Linearithmic | Merge sort                     |
