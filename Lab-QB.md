@@ -1,4 +1,4 @@
-# Lab Examination Questions (Python Programming)
+# Lab Practice (Python Programming)
 
 ## Question 1 — Array Operations
 
