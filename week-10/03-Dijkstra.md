@@ -9,7 +9,7 @@ Dijkstra’s Algorithm is one of the most important **greedy algorithms** used i
 
 Dijkstra’s Algorithm computes the **minimum distance (shortest path)** from a **source node** to all other nodes in a **weighted graph**.
 
-### ✔️ Key Characteristics:
+###  Key Characteristics:
 
 * Works on **weighted graphs**
 * Handles **non-negative edge weights only**
@@ -91,7 +91,7 @@ Consider the graph:
 | 3     | C           | D=4                |
 | 4     | D           | Final              |
 
-### ✅ Final shortest distances:
+### Final shortest distances:
 
 * A → B = 1
 * A → C = 3
@@ -166,7 +166,7 @@ print(dijkstra(graph, 0))
 | Array-based               | (O(V^2))           |
 | Min Heap (Priority Queue) | (O((V + E)\log V)) |
 
-👉 Most efficient version uses a **priority queue (heap)**
+Most efficient version uses a **priority queue (heap)**
 
 ---
 
@@ -180,10 +180,10 @@ print(dijkstra(graph, 0))
 
 # 10. Limitations
 
-❌ Does **not work with negative weights**
-❌ Cannot detect negative cycles
+- Does **not work with negative weights**
+- Cannot detect negative cycles
 
-👉 For negative weights → use **Bellman-Ford Algorithm**
+For negative weights → use **Bellman-Ford Algorithm**
 
 ---
 
