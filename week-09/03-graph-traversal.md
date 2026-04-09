@@ -54,7 +54,7 @@ D   E
 
 ## **Traversal Example**
 
-```id="b1p4d3"
+```
 BFS from A: A B C D E
 ```
 
@@ -68,7 +68,7 @@ BFS from A: A B C D E
 
 ## **Python Code**
 
-```python id="0t9r0k"
+```python 
 from collections import deque
 
 def bfs(graph, start):
@@ -123,7 +123,7 @@ DFS from A: A B D E C
 
 ## **Python Code (Recursive)**
 
-```python id="0hm6vp"
+```python
 def dfs(graph, node, visited):
     if node not in visited:
         print(node, end=" ")

@@ -123,25 +123,39 @@ Dijkstra(G, source):
 # 7. Python Implementation
 
 ```python
-import heapq
+def dijkstra(graph, V, source):
+    # Step 1: Initialize distances and visited array
+    dist = [float('inf')] * V
+    visited = [False] * V
 
-def dijkstra(graph, source):
-    n = len(graph)
-    dist = [float('inf')] * n
     dist[source] = 0
-    
-    pq = [(0, source)]  # (distance, node)
 
-    while pq:
-        current_dist, u = heapq.heappop(pq)
+    # Step 2: Repeat V times
+    for _ in range(V):
+        
+        # Find vertex with minimum distance not visited
+        u = -1
+        min_dist = float('inf')
+        
+        for i in range(V):
+            if not visited[i] and dist[i] < min_dist:
+                min_dist = dist[i]
+                u = i
 
-        if current_dist > dist[u]:
-            continue
+        # If no reachable vertex remains
+        if u == -1:
+            break
 
-        for v, weight in graph[u]:
-            if dist[u] + weight < dist[v]:
+        # Mark u as visited
+        visited[u] = True
+
+        # Step 3: Relax neighbors
+        for neighbor in graph[u]:
+            v = neighbor[0]
+            weight = neighbor[1]
+
+            if not visited[v] and dist[u] + weight < dist[v]:
                 dist[v] = dist[u] + weight
-                heapq.heappush(pq, (dist[v], v))
 
     return dist
 
@@ -154,8 +168,148 @@ graph = {
     3: []
 }
 
-print(dijkstra(graph, 0))
+
+
+V = len(graph_dict)
+
+# Convert dictionary → list of lists
+graph = []
+for i in range(V):
+    graph.append(graph_dict[i])
+
+
+# Using the algorithm
+source = 0
+
+result = dijkstra(graph, V, source)
+
+print("Shortest distances from source:", result)
 ```
+
+## step-by-step execution trace
+
+## 📊 Initial Setup
+
+Graph:
+
+```
+0 → (1,1), (2,4)
+1 → (2,2), (3,5)
+2 → (3,1)
+3 → []
+```
+
+Source = `0`
+
+### Initial State:
+
+| Vertex | Distance | Visited |
+| ------ | -------- | ------- |
+| 0      | 0        | False   |
+| 1      | ∞        | False   |
+| 2      | ∞        | False   |
+| 3      | ∞        | False   |
+
+---
+
+##  Iteration 1
+
+**Pick minimum unvisited vertex → 0**
+
+Mark `0` as visited
+
+Relax neighbors:
+
+* 0 → 1 (weight 1) → `0 + 1 = 1 < ∞` → update
+* 0 → 2 (weight 4) → `0 + 4 = 4 < ∞` → update
+
+### Updated Table:
+
+| Vertex | Distance | Visited |
+| ------ | -------- | ------- |
+| 0      | 0        | True       |
+| 1      | 1        | False   |
+| 2      | 4        | False   |
+| 3      | ∞        | False   |
+
+---
+
+##  Iteration 2
+
+**Pick minimum unvisited vertex → 1**
+
+Mark `1` as visited
+
+Relax neighbors:
+
+* 1 → 2 (weight 2) → `1 + 2 = 3 < 4` → update
+* 1 → 3 (weight 5) → `1 + 5 = 6 < ∞` → update
+
+### Updated Table:
+
+| Vertex | Distance | Visited |
+| ------ | -------- | ------- |
+| 0      | 0        | ✅       |
+| 1      | 1        | ✅       |
+| 2      | 3        | False   |
+| 3      | 6        | False   |
+
+---
+
+##  Iteration 3
+
+**Pick minimum unvisited vertex → 2**
+
+Mark `2` as visited
+
+Relax neighbors:
+
+* 2 → 3 (weight 1) → `3 + 1 = 4 < 6` → update
+
+### Updated Table:
+
+| Vertex | Distance | Visited |
+| ------ | -------- | ------- |
+| 0      | 0        | ✅       |
+| 1      | 1        | ✅       |
+| 2      | 3        | ✅       |
+| 3      | 4        | False   |
+
+---
+
+##  Iteration 4
+
+**Pick minimum unvisited vertex → 3**
+
+Mark `3` as visited
+
+No neighbors → no updates
+
+### Final Table:
+
+| Vertex | Distance | Visited |
+| ------ | -------- | ------- |
+| 0      | 0        | yes       |
+| 1      | 1        | yes      |
+| 2      | 3        | yes      |
+| 3      | 4        | yes      |
+
+---
+
+##  Final Result
+
+```
+[0, 1, 3, 4]
+```
+
+---
+
+## 🔍 Key Observation
+
+* Node `2` improved from **4 → 3** via node `1`
+* Node `3` improved from **6 → 4** via node `2`
+* This shows the **greedy relaxation mechanism** of Dijkstra
+
 
 ---
 
